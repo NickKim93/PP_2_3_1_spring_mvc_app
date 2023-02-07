@@ -2,14 +2,18 @@ package web.DAO;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestParam;
 import web.entity.User;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
+@Repository
 public class UserDAOImpl implements UserDAO {
 
-//    @PersistenceContext
+    @PersistenceContext
     private EntityManager entityManager;
 
     @Override
@@ -19,7 +23,6 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public void saveUser(User user) {
-
     }
 
     @Override
