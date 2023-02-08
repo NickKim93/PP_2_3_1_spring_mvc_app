@@ -81,6 +81,7 @@ public class JavaConfig implements WebMvcConfigurer {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactory.setDataSource(getDataSource());
+        entityManagerFactory.setPackagesToScan("web.entity");
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         entityManagerFactory.setJpaVendorAdapter(vendorAdapter);
@@ -92,8 +93,8 @@ public class JavaConfig implements WebMvcConfigurer {
     Properties additionalProperties() {
         Properties properties = new Properties();
         properties.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
-        properties.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
         properties.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
+        properties.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
         return properties;
     }
 

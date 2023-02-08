@@ -9,13 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44faf22e-cf3f-4f8a-ab33-24b5c29dce6a" name="Changes" comment="first commit. Getting connection to DB and Tomcat">
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" afterDir="false" />
+    <list default="true" id="44faf22e-cf3f-4f8a-ab33-24b5c29dce6a" name="Changes" comment="second commit. Getting connection to DB, creating UserDAO and UserService classes, DI">
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newUser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/updateUser.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/DAO/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/DAO/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/DAO/UserDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/config/JavaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/JavaConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,24 +61,24 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/nikit/IdeaProjects/PP_2_2_2_spring-mvc",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "763a2b6b3d3d35237e9a24a68577a2ea",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nikit/IdeaProjects/PP_2_2_2_spring-mvc&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;763a2b6b3d3d35237e9a24a68577a2ea&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.71" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.71" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -174,8 +179,23 @@
       <workItem from="1675648707371" duration="2643000" />
       <workItem from="1675651373586" duration="3569000" />
       <workItem from="1675732509291" duration="12024000" />
-      <workItem from="1675752266850" duration="1855000" />
+      <workItem from="1675752266850" duration="4592000" />
+      <workItem from="1675758467933" duration="4558000" />
+      <workItem from="1675766383313" duration="3633000" />
+      <workItem from="1675774912571" duration="95000" />
+      <workItem from="1675822029031" duration="6697000" />
+      <workItem from="1675829797582" duration="4189000" />
+      <workItem from="1675834107973" duration="1680000" />
+      <workItem from="1675839813167" duration="5936000" />
     </task>
+    <task id="LOCAL-00001" summary="second commit. Getting connection to DB, creating UserDAO and UserService classes, DI">
+      <created>1675754274718</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675754274718</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,5 +211,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="second commit. Getting connection to DB, creating UserDAO and UserService classes, DI" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit. Getting connection to DB, creating UserDAO and UserService classes, DI" />
   </component>
 </project>
